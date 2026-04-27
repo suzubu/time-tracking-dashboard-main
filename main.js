@@ -10,12 +10,17 @@ const periodLabels = {
 async function fetchData() {
   try {
     const response = await fetch("data.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const data = await response.json();
     return data;
   } catch (error) {
     console.error("Failed to load data:", error);
-    document.querySelector(".cards-grid").innerHTML =
-      "<p>Sorry, failed to load data. Please try again.</p>";
+    const grid = document.querySelector(".cards-grid");
+    if (grid) {
+      grid.innerHTML = "<p>Sorry, failed to load data. Please try again.</p>";
+    }
   }
 }
 
@@ -23,6 +28,8 @@ function updateCards(data, period) {
   cards.forEach((card) => {
     const currentHours = card.querySelector(".card-current-hours");
     const previousHours = card.querySelector(".card-previous-hours");
+
+    if (!currentHours || !previousHours) return;
 
     currentHours.classList.add("fade");
     previousHours.classList.add("fade");

@@ -171,7 +171,7 @@ main {
 
 .nav__btn:hover {
   opacity: 1;
-  columns: var(--white);
+  color: var(--white);
 }
 
 .nav__btn.active {
