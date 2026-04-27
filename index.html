@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./images/favicon-32x32.png">
+
+  <title>Time tracking dashboard</title>
+  <link rel="stylesheet"
+        href="styles.css">
+
+</head>
+
+<body>
+
+  <main>
+    <div class="container">
+      <aside class="profile">
+        <div class="profile__content">
+          <img src="images/image-jeremy.png"
+               alt="Jeremy Robson"
+               class="profile__img">
+          <div class="profile__text">
+            <p class="profile__report text-6">Report for</p>
+            <h1 class="profile__name">Jeremy Robson</h1>
+          </div>
+        </div> <!-- ← close profile__content HERE -->
+
+        <nav class="profile__nav">
+          <ul>
+            <li><button class="nav__btn text-5-rg">Daily</button></li>
+            <li><button class="nav__btn active text-5-rg">Weekly</button></li>
+            <li><button class="nav__btn text-5-rg">Monthly</button></li>
+          </ul>
+        </nav>
+
+      </aside>
+      <section class="cards-grid">
+        <article class="card"
+                 id="work">
+          <div class="card-accent">
+            <img src="images/icon-work.svg"
+                 alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-body__top">
+              <span class="card-category text-5-md">Work</span>
+              <span class="card-menu text-3">•••</span>
+            </div>
+            <div class="card-body__bottom">
+              <span class="card-current-hours">32hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </article>
+        <article class="card"
+                 id="play">
+          <div class="card-accent">
+            <img src="images/icon-play.svg"
+                 alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-body__top">
+              <span class="card-category text-5-md">Play</span>
+              <span class="card-menu text-">•••</span>
+            </div>
+            <div class="card-body__bottom">
+              <span class="card-current-hours">10hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 36hrs</span>
+            </div>
+          </div>
+        </article>
+        <article class="card"
+                 id="study">
+          <div class="card-accent">
+            <img src="images/icon-study.svg"
+                 alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-body__top">
+              <span class="card-category text-5-md">Study</span>
+              <span class="card-menu text-3">•••</span>
+            </div>
+            <div class="card-body__bottom">
+              <span class="card-current-hours">4hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 7hrs</span>
+            </div>
+          </div>
+        </article>
+        <article class="card"
+                 id="exercise">
+          <div class="card-accent">
+            <img src="images/icon-exercise.svg"
+                 alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-body__top">
+              <span class="card-category text-5-md">Exercise</span>
+              <span class="card-menu text-3">•••</span>
+            </div>
+            <div class="card-body__bottom">
+              <span class="card-current-hours ">4hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 5hrs</span>
+            </div>
+          </div>
+        </article>
+        <article class="card"
+                 id="social">
+          <div class="card-accent">
+            <img src="images/icon-social.svg"
+                 alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-body__top">
+              <span class="card-category text-5-md">Social</span>
+              <span class="card-menu text-3">•••</span>
+            </div>
+            <div class="card-body__bottom">
+              <span class="card-current-hours">5hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 10hrs</span>
+            </div>
+          </div>
+        </article>
+        <article class="card"
+                 id="self-care">
+          <div class="card-accent">
+            <img src="images/icon-self-care.svg"
+                 alt="">
+          </div>
+          <div class="card-body">
+            <div class="card-body__top">
+              <span class="card-category text-5-md">Self Care</span>
+              <span class="card-menu text-3">•••</span>
+            </div>
+            <div class="card-body__bottom">
+              <span class="card-current-hours">2hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 2hrs</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+</body>
+
+</html>
