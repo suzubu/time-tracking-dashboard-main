@@ -70,6 +70,11 @@ ol {
   list-style: none;
 }
 
+:focus-visible {
+  outline: 3px solid var(--purple-500);
+  outline-offset: 3px;
+}
+
 /* Presets */
 
 .profile__name {
@@ -117,7 +122,7 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--spacing-300);
 }
 
 .profile {
@@ -132,7 +137,7 @@ main {
   align-items: center;
   background-color: var(--purple-600);
   border-radius: 16px;
-  padding-left: 2rem;
+  padding-left: var(--spacing-200);
 }
 
 .profile__img {
@@ -140,12 +145,12 @@ main {
   width: 7.5rem;
   height: 7.5rem;
   border: 3px solid var(--white);
-  margin: 4rem 2rem;
+  margin: var(--spacing-500) var(--spacing-200);
 }
 
 .profile__report {
   color: var(--navy-200);
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--spacing-100);
 }
 
 .profile__nav {
@@ -157,8 +162,8 @@ main {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 1.6rem;
-  gap: 1.6rem;
+  padding: var(--spacing-200);
+  gap: var(--spacing-200);
 }
 
 .nav__btn {
@@ -183,11 +188,12 @@ main {
 .cards-grid {
   width: 100%;
 }
+
 .card {
   border-radius: 16px;
   overflow: hidden;
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-300);
   position: relative;
 }
 
@@ -202,21 +208,25 @@ main {
 #study .card-accent {
   background-color: var(--pink-400);
 }
+
 #exercise .card-accent {
   background-color: var(--green-400);
 }
+
 #social .card-accent {
   background-color: var(--purple-700);
 }
+
 #self-care .card-accent {
   background-color: var(--yellow-300);
 }
+
 .card-accent {
   height: 8rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 1.6rem;
+  padding: var(--spacing-200);
 }
 
 .card-accent img {
@@ -228,8 +238,8 @@ main {
 .card-body {
   background-color: var(--navy-900);
   border-radius: 16px;
-  padding: 3rem;
-  margin-top: -3rem;
+  padding: var(--spacing-300);
+  margin-top: -3rem; /* intentional overlap of card-accent */
   position: relative;
   transition: background-color 0.2s ease;
 }
@@ -243,7 +253,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--spacing-100);
 }
 
 .card-body__bottom {
@@ -251,9 +261,11 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+
 .card-menu {
   color: var(--navy-200);
 }
+
 .card-menu:hover {
   opacity: 1;
   color: var(--white);
@@ -278,31 +290,33 @@ main {
 @media (min-width: 48rem) {
   .container {
     max-width: 90rem;
-    padding: 5rem;
+    padding: var(--spacing-500);
   }
 
   .profile__nav ul {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: var(--spacing-500);
   }
 
   .card {
     margin-bottom: 0;
   }
+
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: var(--spacing-300);
   }
 
   .card-body__top {
-    padding-bottom: 1rem;
+    padding-bottom: var(--spacing-100);
   }
+
   .card-body__bottom {
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 1rem;
+    row-gap: var(--spacing-100);
   }
 }
 
@@ -311,7 +325,7 @@ main {
   .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 2rem;
+    gap: var(--spacing-300);
     align-items: stretch;
     max-width: 120rem;
   }
@@ -326,11 +340,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding-bottom: 4rem;
+    padding-bottom: var(--spacing-500);
   }
 
   .profile__name {
-    padding-right: 1rem;
+    padding-right: var(--spacing-200);
   }
 
   .profile__nav {
@@ -341,16 +355,17 @@ main {
 
   .profile__nav ul {
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2.5rem;
+    gap: var(--spacing-200);
+    padding: var(--spacing-300);
     width: 100%;
     justify-content: flex-end;
   }
+
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
+    gap: var(--spacing-300);
   }
 
   .card {
