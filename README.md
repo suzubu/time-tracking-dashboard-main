@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repo](https://github.com/suzubu/time-tracking-dashboard-main)
-- Live Site URL: [Live URL](https://your-live-site-url.com)
+- Live Site URL: [Live URL](https://suzubu.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
