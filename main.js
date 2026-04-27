@@ -1,10 +1,22 @@
 const buttons = document.querySelectorAll(".nav__btn");
 const cards = document.querySelectorAll(".card");
 
+const periodLabels = {
+  daily: "Yesterday",
+  weekly: "Last Week",
+  monthly: "Last Month",
+};
+
 async function fetchData() {
-  const response = await fetch("data.json");
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch("data.json");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Failed to load data:", error);
+    document.querySelector(".cards-grid").innerHTML =
+      "<p>Sorry, failed to load data. Please try again.</p>";
+  }
 }
 
 function updateCards(data, period) {
@@ -18,14 +30,14 @@ function updateCards(data, period) {
     setTimeout(() => {
       const cardId = card.id;
       const cardData = data.find(
-        (item) => item.title.toLowerCase().replace(" ", "-") === cardId,
+        (item) => item.title.toLowerCase().replace(/\s+/g, "-") === cardId,
       );
 
       if (cardData) {
         const current = cardData.timeframes[period].current;
         const previous = cardData.timeframes[period].previous;
         currentHours.textContent = `${current}hrs`;
-        previousHours.textContent = `Last ${period} - ${previous}hrs`;
+        previousHours.textContent = `${periodLabels[period]} - ${previous}hrs`;
       }
 
       currentHours.classList.remove("fade");
@@ -36,12 +48,20 @@ function updateCards(data, period) {
 
 async function init() {
   const data = await fetchData();
+
+  if (!data) return;
+
   updateCards(data, "weekly");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      buttons.forEach((btn) => btn.classList.remove("active"));
+      buttons.forEach((btn) => {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-pressed", "false");
+      });
+
       button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
       const period = button.dataset.period;
       updateCards(data, period);
     });

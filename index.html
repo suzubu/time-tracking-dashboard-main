@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon"
         type="image/png"
@@ -31,13 +30,20 @@
             <p class="profile__report text-6">Report for</p>
             <h1 class="profile__name">Jeremy Robson</h1>
           </div>
-        </div> <!-- ← close profile__content HERE -->
+        </div>
 
-        <nav class="profile__nav">
+        <nav class="profile__nav"
+             aria-label="Time period">
           <ul>
-            <li><button class="nav__btn text-5-rg" data-period="daily">Daily</button></li>
-            <li><button class="nav__btn active text-5-rg" data-period="weekly">Weekly</button></li>
-            <li><button class="nav__btn text-5-rg" data-period="monthly">Monthly</button></li>
+            <li><button class="nav__btn text-5-rg"
+                      data-period="daily"
+                      aria-pressed="false">Daily</button></li>
+            <li><button class="nav__btn active text-5-rg"
+                      data-period="weekly"
+                      aria-pressed="false">Weekly</button></li>
+            <li><button class="nav__btn text-5-rg"
+                      data-period="monthly"
+                      aria-pressed="false">Monthly</button></li>
           </ul>
         </nav>
 
@@ -51,8 +57,9 @@
           </div>
           <div class="card-body">
             <div class="card-body__top">
-              <span class="card-category text-5-md">Work</span>
-              <span class="card-menu text-3">•••</span>
+              <h2 class="card-category text-5-md">Work</h2>
+              <button class="card-menu"
+                      aria-label="More options">•••</button>
             </div>
             <div class="card-body__bottom">
               <span class="card-current-hours">32hrs</span>
@@ -60,6 +67,7 @@
             </div>
           </div>
         </article>
+
         <article class="card"
                  id="play">
           <div class="card-accent">
@@ -68,15 +76,17 @@
           </div>
           <div class="card-body">
             <div class="card-body__top">
-              <span class="card-category text-5-md">Play</span>
-              <span class="card-menu text-">•••</span>
+              <h2 class="card-category text-5-md">Play</h2>
+              <button class="card-menu"
+                      aria-label="More options">•••</button>
             </div>
             <div class="card-body__bottom">
               <span class="card-current-hours">10hrs</span>
-              <span class="card-previous-hours text-6">Last Week - 36hrs</span>
+              <span class="card-previous-hours text-6">Last Week - 8hrs</span>
             </div>
           </div>
         </article>
+
         <article class="card"
                  id="study">
           <div class="card-accent">
@@ -85,8 +95,9 @@
           </div>
           <div class="card-body">
             <div class="card-body__top">
-              <span class="card-category text-5-md">Study</span>
-              <span class="card-menu text-3">•••</span>
+              <h2 class="card-category text-5-md">Study</h2>
+              <button class="card-menu"
+                      aria-label="More options">•••</button>
             </div>
             <div class="card-body__bottom">
               <span class="card-current-hours">4hrs</span>
@@ -94,6 +105,7 @@
             </div>
           </div>
         </article>
+
         <article class="card"
                  id="exercise">
           <div class="card-accent">
@@ -102,15 +114,17 @@
           </div>
           <div class="card-body">
             <div class="card-body__top">
-              <span class="card-category text-5-md">Exercise</span>
-              <span class="card-menu text-3">•••</span>
+              <h2 class="card-category text-5-md">Exercise</h2>
+              <button class="card-menu"
+                      aria-label="More options">•••</button>
             </div>
             <div class="card-body__bottom">
-              <span class="card-current-hours ">4hrs</span>
+              <span class="card-current-hours">4hrs</span>
               <span class="card-previous-hours text-6">Last Week - 5hrs</span>
             </div>
           </div>
         </article>
+
         <article class="card"
                  id="social">
           <div class="card-accent">
@@ -119,8 +133,9 @@
           </div>
           <div class="card-body">
             <div class="card-body__top">
-              <span class="card-category text-5-md">Social</span>
-              <span class="card-menu text-3">•••</span>
+              <h2 class="card-category text-5-md">Social</h2>
+              <button class="card-menu"
+                      aria-label="More options">•••</button>
             </div>
             <div class="card-body__bottom">
               <span class="card-current-hours">5hrs</span>
@@ -128,6 +143,7 @@
             </div>
           </div>
         </article>
+
         <article class="card"
                  id="self-care">
           <div class="card-accent">
@@ -136,8 +152,9 @@
           </div>
           <div class="card-body">
             <div class="card-body__top">
-              <span class="card-category text-5-md">Self Care</span>
-              <span class="card-menu text-3">•••</span>
+              <h2 class="card-category text-5-md">Self Care</h2>
+              <button class="card-menu"
+                      aria-label="More options">•••</button>
             </div>
             <div class="card-body__bottom">
               <span class="card-current-hours">2hrs</span>
@@ -145,11 +162,14 @@
             </div>
           </div>
         </article>
+
       </section>
     </div>
   </main>
+
   <script type="module"
           src="main.js"></script>
+
 </body>
 
 </html>
