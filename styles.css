@@ -164,6 +164,14 @@ main {
 .nav__btn {
   color: var(--navy-200);
   opacity: 0.5;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav__btn:hover {
+  opacity: 1;
+  columns: var(--white);
 }
 
 .nav__btn.active {
@@ -223,6 +231,12 @@ main {
   padding: 3rem;
   margin-top: -3rem;
   position: relative;
+  transition: backgroud-color 0.2s ease;
+}
+
+.card-body:hover {
+  background-color: var(--navy-800);
+  cursor: pointer;
 }
 
 .card-body__top {
@@ -240,9 +254,23 @@ main {
 .card-menu {
   color: var(--navy-200);
 }
+.card-menu:hover {
+  opacity: 1;
+  columns: var(--white);
+}
 
 .card-previous-hours {
   color: var(--navy-200);
+}
+
+.card-current-hours,
+.card-previous-hours {
+  transition: opacity 0.2s ease;
+}
+
+.card-current-hours.fade,
+.card-previous-hours.fade {
+  opacity: 0;
 }
 
 /* Tablet  */
